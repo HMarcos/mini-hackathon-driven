@@ -31,6 +31,7 @@ function buscarCidade(lon, lat) {
 }
 
 function preencherDadosCidade(resposta) {
+    document.querySelector(".localizacao").classList.add("escondido");
     console.log(resposta.data);
     cidade = resposta.data[0].name;
     estado = resposta.data[0].state;
