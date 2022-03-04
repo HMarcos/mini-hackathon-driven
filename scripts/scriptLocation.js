@@ -36,6 +36,7 @@ function preencherDadosCidade(resposta) {
     cidade = resposta.data[0].name;
     estado = resposta.data[0].state;
     pais = resposta.data[0].country;
+    requisitarClima();
 }
 
 botaoBusca.addEventListener("click", procurarLongitudeLatitude);
