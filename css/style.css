@@ -2,7 +2,46 @@
     box-sizing: border-box;
 }
 
+h1 {
+    width: 100%;
+    text-align: center;
+    background-color: #addeee;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #0c33a0;
+    padding: 20px;
+    cursor: pointer;
+}
 
+.localizacao {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+input {
+    margin: 10px;
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    background-color: rgba(8, 163, 202, 0.582);
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
 
 /* -- Seção Clima --*/
 .clima {
@@ -28,7 +67,10 @@
     flex-direction: column;
     justify-content: center;
 }
+
 /* -- Utilitarios --*/
+
+
 .escondido {
     display: none;
 }
