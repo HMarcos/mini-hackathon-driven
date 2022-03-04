@@ -1,7 +1,6 @@
 /* -- Conjunto de Variáveis Globais --*/
-API_KEY = "8bdb71c1758a1a69b7f51aa4dc56fe95";
-let latitude = 35;
-let longitute = 139;
+// let latitude = 35;
+// let longitute = 139;
 
 let temperatura;
 let temperaturaMin;
@@ -15,7 +14,7 @@ let velocidadeVento;
 
 /* -- Conjunto de Funções -- */
 function requisitarClima() {
-    const linkRequisicao = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitute}&appid=${API_KEY}`;
+    const linkRequisicao = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude.toFixed(4)}&lon=${longitude.toFixed(4)}&appid=${API_KEY}`;
     console.log(linkRequisicao);
     const promessaClima = axios.get(linkRequisicao);
 
@@ -58,4 +57,4 @@ function converterKelvinParaCelcius(temperaturaKelvin){
 }
 
 /* --- Execução das Funções ---*/
-requisitarClima();
+// requisitarClima();
