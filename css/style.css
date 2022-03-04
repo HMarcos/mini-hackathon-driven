@@ -1,3 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* -- Seção Clima --*/
+.clima {
+    width: 800px;
+    height: fit-content;
+}
+
+.clima__informacoes-principais {
+    display: flex;
+    justify-content: space-around;
+}
+.clima__informacoes-principais__temp {
+    display: flex;
+}
+
+.clima__informacoes-principais__temp__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.clima__informacoes-principais__humidade-vento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* -- Utilitarios --*/
 .escondido {
     display: none;
 }

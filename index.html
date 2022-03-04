@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Weather Web</title>
 </head>
+
 <body>
     <main>
         <section class="localizacao">
@@ -15,9 +17,26 @@
             <input type="text" class="pais" placeholder="Insira País">
             <button>Buscar</button>
         </section>
-        
-        <section class="weather">
-            
+
+        <section class="clima">
+            <div class="clima__informacoes-principais">
+                <div class="clima__informacoes-principais__temp">
+                    <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="clima">
+                    <div class="clima__informacoes-principais__temp__container">
+                        <span class="temperatura"> 29°C</span>
+                        <span class="clima_principal"> Sunny</span>
+                        <span class="clima_descricao">Clima ensorolarado</span>
+                    </div>
+                </div>
+                <div class="clima__informacoes-principais__humidade-vento">
+                    <span class="humidade"> Humidade: 100%</span>
+                    <span class="velocidade-vento"> Velocidade do Vento 5.5 m/s</span>
+                </div>
+            </div>
+            <hr>
+            <div class="clima__inforcoes-secundarias">
+
+            </div>
         </section>
     </main>
     <!--Scripts-->
@@ -25,4 +44,5 @@
     <script src="scripts/scriptLocation.js"></script>
     <script src="scripts/scriptWeather.js"></script>
 </body>
+
 </html>
