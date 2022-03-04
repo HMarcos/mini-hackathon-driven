@@ -45,14 +45,26 @@ button {
 
 /* -- Seção Clima --*/
 .clima {
-    width: 800px;
+    margin: 100px auto;
+    width: 500px;
     height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #13a3c7;
+    border-radius: 10px;
 }
 
 .clima__informacoes-principais {
     display: flex;
     justify-content: space-around;
 }
+
+img {
+    margin: 10px;
+}
+
 .clima__informacoes-principais__temp {
     display: flex;
 }
@@ -61,11 +73,19 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 19px;
 }
 .clima__informacoes-principais__humidade-vento {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 20px;
+    font-size: 19px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #fff;
 }
 
 /* -- Utilitarios --*/

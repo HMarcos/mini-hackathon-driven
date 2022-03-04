@@ -26,6 +26,8 @@ function exibirInformacoesClima(resposta){
     console.log(resposta.data);
 
     extrairInformacoes(resposta.data);
+
+    exibirInfoTela();
 }
 
 function tratarErroResicaoClima(erro) {
@@ -44,9 +46,32 @@ function extrairInformacoes(dadosClima){
     sensacaoTermica = converterKelvinParaCelcius(dadosClima.main.feels_like);
     humidade = dadosClima.main.humidity;
     velocidadeVento = dadosClima.wind.speed;
-
 }
 
+function exibirInfoTela() {
+    const elementoHTML = `
+    <div class="cidade">
+                <h3>${cidade}, ${estado} - ${pais}</h3>
+            </div>
+            <div class="clima__informacoes-principais">
+                <div class="clima__informacoes-principais__temp">
+                    <img src="${linkIcone}" alt="clima">
+                    <div class="clima__informacoes-principais__temp__container">
+                        <span class="temperatura"> ${temperatura}°C</span>
+                        <span class="clima_principal"> ${clima}</span>
+                        <span class="clima_descricao">${descricao}</span>
+                    </div>
+                </div>
+                <div class="clima__informacoes-principais__humidade-vento">
+                    <span class="humidade"> Humidity: ${humidade}%</span>
+                    <span class="velocidade-vento"> Wind Speed ${velocidadeVento} m/s</span>
+                </div>
+            </div>`;
+    
+    const secaoClima = document.querySelector(".clima");
+    secaoClima.innerHTML = elementoHTML;
+    secaoClima.classList.remove("escondido");
+}
 
 function montarLinkIcone(icone) {
     return `http://openweathermap.org/img/wn/${icone}@2x.png`;
